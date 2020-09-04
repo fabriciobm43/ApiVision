@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="38dp"
         android:layout_marginTop="63dp"
-        app:srcCompat="@drawable/familia" />
+        app:srcCompat="@drawable/family" />
 
     <Button
         android:id="@+id/btnAPI"

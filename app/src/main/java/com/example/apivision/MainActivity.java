@@ -55,43 +55,6 @@ public class MainActivity extends AppCompatActivity {
                 VisionRequestInitializer("AIzaSyB5MkIB5lNnQH1kC1tZ3ATeEsv7z66moKs"));
         vision = visionBuilder.build();
 
-        /*imageView=(ImageView) findViewById(R.id.imgFamilia);
-        btnProgress=(Button) findViewById(R.id.button);
-        final Bitmap mybitmap= BitmapFactory.decodeResource(getApplicationContext().getResources(),R.drawable.familia);
-        imageView.setImageBitmap(mybitmap);
-        final Paint rectPaint= new Paint();
-        rectPaint.setStrokeWidth(5);
-        rectPaint.setColor(Color.RED);
-        rectPaint.setStyle(Paint.Style.STROKE);
-        final Bitmap tempBitmap=Bitmap.createBitmap(mybitmap.getWidth(),mybitmap.getHeight(), Bitmap.Config.RGB_565);
-        final Canvas canvas= new Canvas(tempBitmap);
-        btnProgress.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FaceDetector faceDetector = new FaceDetector.Builder(getApplicationContext())
-                        .setTrackingEnabled(false)
-                        .setLandmarkType(FaceDetector.ALL_LANDMARKS)
-                        .setMode(FaceDetector.FAST_MODE)
-                        .build();
-                if (!faceDetector.isOperational()){
-                    Toast.makeText(MainActivity.this,"face detector", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                Frame frame = new Frame.Builder().setBitmap(mybitmap).build();
-                SparseArray<Face> sparseArray = faceDetector.detect(frame);
-                for(int i=0; i<sparseArray.size();i++){
-                    Face face= sparseArray.valueAt(i);
-                    float x1=face.getPosition().x;
-                    float y1= face.getPosition().y;
-                    float x2= x1+face.getWidth();
-                    float y2 = y1+face.getHeight();
-                    RectF rectF= new RectF(x1,y1,x2,y2);
-                    canvas.drawRoundRect(rectF,2,2,rectPaint);
-
-                }
-                imageView.setImageDrawable(new BitmapDrawable(getResources(),tempBitmap));
-            }
-        });*/
 
     }
 
@@ -168,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                     options.inMutable = true;
                     Bitmap myBitmap = BitmapFactory.decodeResource(
                             getApplicationContext().getResources(),
-                            R.drawable.familia,
+                            R.drawable.family,
                             options
                     );
 
@@ -187,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                             .build();
 
                     if(!faceDetector.isOperational()) {
-                        //new AlertDialog.Builder(v.getContext()).setMessage("Could not set up the face detected!").show();
+
                         return;
                     }
 
